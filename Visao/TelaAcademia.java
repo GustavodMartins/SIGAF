@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 public class TelaAcademia extends javax.swing.JDialog {
 
     /**
-     * Creates new form TelaUsuario
+     * Creates new form TelaAcademia
      */
     DefaultTableModel tmUsuario = new DefaultTableModel(null, new String[]{"Nome", "Email"});
     List<Academia> lista;
