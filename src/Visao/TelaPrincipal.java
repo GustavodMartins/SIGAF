@@ -35,6 +35,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMCadastro = new javax.swing.JMenu();
         jMIUsuario = new javax.swing.JMenuItem();
         jMIAcademia = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMSobre = new javax.swing.JMenu();
         jMSair = new javax.swing.JMenu();
 
@@ -66,6 +67,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMIAcademia.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK));
         jMIAcademia.setText("Acadêmia");
         jMCadastro.add(jMIAcademia);
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem1.setText("Atividades Físicas");
+        jMCadastro.add(jMenuItem1);
 
         jMenuBar1.add(jMCadastro);
 
@@ -139,6 +144,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMSair;
     private javax.swing.JMenu jMSobre;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPFundo;
     // End of variables declaration//GEN-END:variables
 }

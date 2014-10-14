@@ -542,6 +542,9 @@
               <Image iconType="3" name="/Icone/first.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBPrimeiroActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBAnterior">
           <Properties>
@@ -549,6 +552,9 @@
               <Image iconType="3" name="/Icone/previous.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAnteriorActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBProximo">
           <Properties>
@@ -556,6 +562,9 @@
               <Image iconType="3" name="/Icone/next.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBProximoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBUltimo">
           <Properties>
@@ -563,6 +572,9 @@
               <Image iconType="3" name="/Icone/last.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBUltimoActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

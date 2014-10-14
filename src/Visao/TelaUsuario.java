@@ -374,12 +374,32 @@ public class TelaUsuario extends javax.swing.JDialog {
         jPanel8.setBackground(new java.awt.Color(0, 102, 255));
 
         jBPrimeiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icone/first.png"))); // NOI18N
+        jBPrimeiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPrimeiroActionPerformed(evt);
+            }
+        });
 
         jBAnterior.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icone/previous.png"))); // NOI18N
+        jBAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAnteriorActionPerformed(evt);
+            }
+        });
 
         jBProximo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icone/next.png"))); // NOI18N
+        jBProximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBProximoActionPerformed(evt);
+            }
+        });
 
         jBUltimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icone/last.png"))); // NOI18N
+        jBUltimo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBUltimoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -507,6 +527,40 @@ public class TelaUsuario extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_jTTabelaMouseClicked
 
+    private void jBPrimeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPrimeiroActionPerformed
+        // TODO add your handling code here:
+          selecionarLinhaTabela(0);
+          
+    }//GEN-LAST:event_jBPrimeiroActionPerformed
+
+    private void jBUltimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimoActionPerformed
+        // TODO add your handling code here:
+        int quantLinha = jTTabela.getRowCount();
+        selecionarLinhaTabela(quantLinha-1);
+        
+    }//GEN-LAST:event_jBUltimoActionPerformed
+
+    private void jBAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAnteriorActionPerformed
+        // TODO add your handling code here:
+        int quantLinha = jTTabela.getSelectedRow();
+        selecionarLinhaTabela(quantLinha-1);
+    }//GEN-LAST:event_jBAnteriorActionPerformed
+
+    private void jBProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBProximoActionPerformed
+        // TODO add your handling code here:
+        int quantLinha = jTTabela.getSelectedRow();
+        selecionarLinhaTabela(quantLinha+1);
+    }//GEN-LAST:event_jBProximoActionPerformed
+
+    
+     private void selecionarLinhaTabela(int posicao) {
+        int quantidadeLinhas = this.jTTabela.getRowCount();
+        if ((posicao >= 0) && (posicao < quantidadeLinhas)) {
+           this.jTTabela.requestFocus();
+           this.jTTabela.clearSelection();
+            this.jTTabela.addRowSelectionInterval(posicao, posicao);
+        }
+     }
     /**
      * @param args the command line arguments
      */
