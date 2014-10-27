@@ -7,7 +7,7 @@
 package Visao;
 
 import Logico.Avaliacao;
-import Logico.EncriptaSenha;
+//import Logico.EncriptaSenha;
 import Logico.Usuario;
 import dao.DaoAvaliacao;
 import dao.DaoUsuario;
@@ -596,15 +596,15 @@ public class TelaAvaliacao extends javax.swing.JDialog {
             //usuario.setNome(pesquisa);
             
             usuario.setIdusuario(Integer.parseInt(pesquisa));
-            try {
-                lista = dao.pesquisarUsuario(usuario);
+           /* try {
+                //lista = dao.pesquisarUsuario(usuario);
                 MostraListaUse(lista);
                 //jTNome.setText(lista.get(usuario.getNome()));
                 //jTCodUsuario.setText(String.valueOf(lista.get(usuario.getIdusuario())));
                 
             } catch (SQLException ex) {
                 Logger.getLogger(TelaAvaliacao.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
             
             
         }
