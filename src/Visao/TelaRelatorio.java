@@ -143,6 +143,7 @@ public class TelaRelatorio extends javax.swing.JDialog {
         JasperPrint print = JasperFillManager.fillReport(report, filtro, Conexao.getConexao());    
         JasperViewer viewer = new JasperViewer(print, false);    
         viewer.setVisible(true); 
+        this.dispose();
         
         /*HashMap filtro = new HashMap();
         filtro.put("dtavainicial", Anulavel.getData(jDperiodo.getDate()));

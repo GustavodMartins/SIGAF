@@ -6,6 +6,8 @@
 
 package Visao;
 
+import javax.swing.JDialog;
+
 /**
  *
  * @author GUSTAVO
@@ -17,6 +19,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
+        TelaLogin login = new TelaLogin(this, true);
+        login.setVisible(true);
         setContentPane(new Fundo());
         setExtendedState(this.MAXIMIZED_BOTH);
     }
@@ -35,9 +39,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMCadastro = new javax.swing.JMenu();
         jMIUsuario = new javax.swing.JMenuItem();
         jMIAcademia = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMAtividades = new javax.swing.JMenuItem();
         jMSobre = new javax.swing.JMenu();
         jMSair = new javax.swing.JMenu();
+        jMHistorico = new javax.swing.JMenu();
+        jMHistoAcademia = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,9 +74,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMIAcademia.setText("Acadêmia");
         jMCadastro.add(jMIAcademia);
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem1.setText("Atividades Físicas");
-        jMCadastro.add(jMenuItem1);
+        jMAtividades.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK));
+        jMAtividades.setText("Atividades Físicas");
+        jMAtividades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMAtividadesActionPerformed(evt);
+            }
+        });
+        jMCadastro.add(jMAtividades);
 
         jMenuBar1.add(jMCadastro);
 
@@ -79,6 +90,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMSair.setText("SAIR");
         jMenuBar1.add(jMSair);
+
+        jMHistorico.setText("RELATÓRIOS");
+
+        jMHistoAcademia.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.ALT_MASK));
+        jMHistoAcademia.setText("Histórico Acadêmia");
+        jMHistoAcademia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMHistoAcademiaActionPerformed(evt);
+            }
+        });
+        jMHistorico.add(jMHistoAcademia);
+
+        jMenuBar1.add(jMHistorico);
 
         setJMenuBar(jMenuBar1);
 
@@ -101,6 +125,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         TelaUsuario usuario = new TelaUsuario(this, true);
         usuario.setVisible(true);
     }//GEN-LAST:event_jMIUsuarioActionPerformed
+
+    private void jMAtividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMAtividadesActionPerformed
+        // TODO add your handling code here:
+         TelaAvaliacao avaliacao = new TelaAvaliacao(this, true);
+        avaliacao.setVisible(true);
+    }//GEN-LAST:event_jMAtividadesActionPerformed
+
+    private void jMHistoAcademiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMHistoAcademiaActionPerformed
+        // TODO add your handling code here:
+        TelaRelatorio relatorio = new TelaRelatorio(this, true);
+        relatorio.setVisible(true);
+    }//GEN-LAST:event_jMHistoAcademiaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,19 +168,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPrincipal().setVisible(true);
+                new TelaPrincipal();//.setVisible(false)
+               
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem jMAtividades;
     private javax.swing.JMenu jMCadastro;
+    private javax.swing.JMenuItem jMHistoAcademia;
+    private javax.swing.JMenu jMHistorico;
     private javax.swing.JMenuItem jMIAcademia;
     private javax.swing.JMenuItem jMIUsuario;
     private javax.swing.JMenu jMSair;
     private javax.swing.JMenu jMSobre;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPFundo;
     // End of variables declaration//GEN-END:variables
 }

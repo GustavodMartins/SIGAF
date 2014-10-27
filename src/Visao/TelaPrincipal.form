@@ -29,13 +29,16 @@
                 <Property name="text" type="java.lang.String" value="Acad&#xea;mia"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="jMAtividades">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Alt+F"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Atividades F&#xed;sicas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMAtividadesActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -48,6 +51,24 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="SAIR"/>
           </Properties>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMHistorico">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="RELAT&#xd3;RIOS"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMHistoAcademia">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+H"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Hist&#xf3;rico Acad&#xea;mia"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMHistoAcademiaActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
         </Menu>
       </SubComponents>
     </Menu>
